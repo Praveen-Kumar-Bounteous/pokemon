@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useAllPokemon } from "../hooks/useAllPokemon";
 import PokemonCard from "@/components/PokemonCard";
-import { Spinner } from "@/components/ui/spinner";
 import PokemonCardSkeleton from "@/components/PokemonCardSkeleton";
 
 function PokemonList() {
