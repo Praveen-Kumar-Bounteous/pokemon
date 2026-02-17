@@ -3,7 +3,7 @@ import { fetchFeaturedPokemon } from "../api/pokemon.api";
 
 export const useFeaturedPokemon = () => {
   return useQuery({
-    queryKey: ["pokemon"],
+    queryKey: ["pokemon", "featured"],
     queryFn: fetchFeaturedPokemon,
     staleTime: 1000 * 60 * 5,
   });

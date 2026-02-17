@@ -3,8 +3,7 @@ import { Button } from "./ui/button"
 
 const navItems = [
     { to:"/", label: "Home"},
-    { to:"/poke", label: "Pokemon"},
-    { to:"/about", label: "About"},
+    { to:"/poke", label: "Pokemon"}
 ]
 
 function NavigationBar() {

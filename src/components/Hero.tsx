@@ -17,7 +17,6 @@ const Hero = () => {
 
   const nextRef = useRef<HTMLButtonElement>(null);
 
-  // Auto-scroll every 2 seconds
   useEffect(() => {
     if (items.length === 0) return;
 
@@ -34,13 +33,13 @@ const Hero = () => {
     return <div className="p-8 text-center">Loading...</div>;
 
   return (
-    <div className="w-full bg-gray-100 md:bg-white sm:bg-white">
-    <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto py-16 px-4 md:px-6 rounded-lg gap-6 md:gap-8">
+    <div className="w-full bg-gray-100">
+    <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto py-14 px-4 md:px-6 rounded-lg gap-6 md:gap-8">
       {/* Left Text */}
       <div className="flex-1 text-center md:text-left">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900">
-          <span className="text-red-600">Catch </span>
-          the Best Pokemon Gear and Collectibles!
+          <span className="">Catch </span>
+          the Best <span className="text-blue-600">Pokemon</span> Gear and Collectibles!
         </h1>
         <p className="text-base sm:text-lg text-gray-700 mb-6 max-w-full sm:max-w-md mx-auto md:mx-0">
           Gear up for the ultimate Pokémon experience! From iconic toys and apparel to limited-edition collectibles, our collection is crafted for fans of all ages.
