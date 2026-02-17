@@ -9,6 +9,7 @@ import {
 } from "./ui/carousel";
 import { useFeaturedPokemon } from "@/hooks/useFeaturedPokemon";
 import { useEffect, useRef } from "react";
+import PokemonCardSkeleton from "./PokemonCardSkeleton";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Hero = () => {
   }, [items]);
 
   if (isPending)
-    return <div className="p-8 text-center">Loading...</div>;
+    return <div className="p-8"><PokemonCardSkeleton /></div>;
 
   return (
     <div className="w-full bg-gray-100">

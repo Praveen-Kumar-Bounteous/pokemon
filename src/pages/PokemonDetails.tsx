@@ -8,6 +8,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Spinner } from "@/components/ui/spinner";
 import { Progress } from "@/components/ui/progress";
+import PokemonDetailsSkeleton from "@/components/PokemonDetailsSkeleton";
 
 type PokemonDetailsProps = {
   id: number | null;
@@ -21,8 +22,7 @@ export default function PokemonDetails({ id }: PokemonDetailsProps) {
   if (isPending)
     return (
       <div className="flex flex-col items-center justify-center gap-2 p-8">
-        <Spinner className="w-12 h-12" />
-        <span className="text-lg">Loading details...</span>
+        <PokemonDetailsSkeleton />
       </div>
     );
 
@@ -65,7 +65,6 @@ export default function PokemonDetails({ id }: PokemonDetailsProps) {
       </CardHeader>
 
       <CardContent className="mt-6 space-y-4">
-        {/* Base Info */}
         <div className="grid grid-cols-2 gap-4">
           <p>
             <strong>Base Experience:</strong> {data.base_experience}
@@ -76,7 +75,6 @@ export default function PokemonDetails({ id }: PokemonDetailsProps) {
           </p>
         </div>
 
-        {/* Abilities */}
         <div>
           <strong>Abilities:</strong>{" "}
           {data.abilities.map((a: any) => (
@@ -90,7 +88,6 @@ export default function PokemonDetails({ id }: PokemonDetailsProps) {
           ))}
         </div>
 
-        {/* Stats with progress bars */}
         <div>
           <strong>Stats:</strong>
           <div className="mt-2 space-y-1">
@@ -107,7 +104,6 @@ export default function PokemonDetails({ id }: PokemonDetailsProps) {
           </div>
         </div>
 
-        {/* Forms */}
         <div>
           <strong>Forms:</strong>{" "}
           {data.forms.map((f: any) => (
@@ -117,7 +113,6 @@ export default function PokemonDetails({ id }: PokemonDetailsProps) {
           ))}
         </div>
 
-        {/* Cries */}
         {data.cries?.latest && (
           <div>
             <strong>Cries:</strong>

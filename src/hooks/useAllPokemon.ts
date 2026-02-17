@@ -24,3 +24,8 @@ export const useAllPokemon = () => {
     staleTime: 1000 * 60 * 5,
   });
 };
+
+
+
+//staleTime : makes the content fresh for specified time interval like it wont refetch the api for same
+//image within that time
