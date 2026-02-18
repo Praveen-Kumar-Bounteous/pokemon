@@ -34,7 +34,7 @@ const Hero = () => {
     return <div className="p-8"><PokemonCardSkeleton /></div>;
 
   return (
-    <div className="w-full bg-gray-100">
+    <div className="w-full">
     <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto py-14 px-4 md:px-6 rounded-lg gap-6 md:gap-8">
       {/* Left Text */}
       <div className="flex-1 text-center md:text-left">
