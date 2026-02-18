@@ -21,7 +21,7 @@ export const useAllPokemon = () => {
       const nextOffset = pages.length * 20;
       return lastPage.next ? nextOffset : undefined;
     },
-    staleTime: 1000 * 60 * 5,
+    staleTime: 1000 * 60 * 30,
   });
 };
 

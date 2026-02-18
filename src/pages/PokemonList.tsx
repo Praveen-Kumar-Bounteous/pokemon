@@ -19,7 +19,9 @@ function PokemonList() {
       if (entries[0].isIntersecting && hasNextPage) {
         fetchNextPage();
       }
-    });
+    },
+      { threshold: 1 }
+    );
 
     if (observerRef.current) {
       observer.observe(observerRef.current);
@@ -34,12 +36,12 @@ function PokemonList() {
 
   if (isPending)
     return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-16 py-14">
-      {Array.from({ length: 8 }).map((_, i) => (
-        <PokemonCardSkeleton key={i} />
-      ))}
-    </div>
-  );
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-16 py-14">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <PokemonCardSkeleton key={i} />
+        ))}
+      </div>
+    );
 
   return (
     <>
@@ -60,8 +62,8 @@ function PokemonList() {
         className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4 px-16 py-14"
       >
         {isFetchingNextPage && Array.from({ length: 4 }).map((_, i) => (
-      <PokemonCardSkeleton key={`loading-${i}`} />
-    ))}
+          <PokemonCardSkeleton key={`loading-${i}`} />
+        ))}
       </div>
     </>
   );
