@@ -17,3 +17,4 @@ export const fetchFeaturedPokemon = async () => {
   if(!res.ok) throw new Error("Failed to fetch pokemon");
   return res.json();
 }
+
